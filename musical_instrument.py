@@ -158,7 +158,11 @@ def main_menu():
 def instrument_menu(instrument):
     print(f"\n--- {instrument.instrument_type} Properties ---")
     for attr, value in instrument.__dict__.items():
-        print(f"{attr.replace('_', ' ').capitalize()}: {value}")
+        if attr == 'price':
+            formatted_value = f'₱{value:,}'
+        else:
+            formatted_value = value
+        print(f"{attr.replace('_', ' ').capitalize()}: {formatted_value}")
 
     while True:
         print(f"\n{instrument.instrument_type} - {instrument.brand}")
