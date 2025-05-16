@@ -184,5 +184,5 @@ def instrument_menu(instrument):
         else:
             print("Invalid option.")
 
-if __name__ == '__main__':
-    main_menu()
+
+main_menu()
